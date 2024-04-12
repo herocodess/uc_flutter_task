@@ -16,9 +16,8 @@ class LoginPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final usernameController =
-        fh.useTextEditingController(text: 'flutter_test');
-    final passwordController = fh.useTextEditingController(text: '1111');
+    final usernameController = fh.useTextEditingController();
+    final passwordController = fh.useTextEditingController();
     final formKey = fh.useState(GlobalKey<FormState>());
     final isLoading = fh.useState<bool>(false);
     final isObscure = fh.useState<bool>(false);
