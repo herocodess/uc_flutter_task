@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uc_flutter_task/core/utils/colors.dart';
 
 Future<T?> pushTo<T>(
   BuildContext context,
@@ -39,7 +40,7 @@ void popUntil(BuildContext context, Type page) {
 class CustomPageRoute<T> extends PageRoute<T> {
   CustomPageRoute(this.child);
   @override
-  Color get barrierColor => Colors.black;
+  Color get barrierColor => AppColors.blackColor;
 
   @override
   String? get barrierLabel => null;

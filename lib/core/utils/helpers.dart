@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:uc_flutter_task/core/storage/secure_storage.dart';
+import 'package:uc_flutter_task/core/storage/shared_prefs.dart';
 import 'package:uc_flutter_task/core/utils/colors.dart';
 import 'package:uc_flutter_task/core/utils/constants.dart';
 import 'package:cached_network_image/cached_network_image.dart';

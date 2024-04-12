@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uc_flutter_task/config.dart';
-import 'package:uc_flutter_task/core/storage/secure_storage.dart';
+import 'package:uc_flutter_task/core/storage/shared_prefs.dart';
 import 'package:uc_flutter_task/core/utils/constants.dart';
 import 'package:uc_flutter_task/core/utils/logger.dart';
 
@@ -38,7 +38,9 @@ class ApiClient {
               },
               onResponse: (response, handler) {
                 if (response.statusCode == 401 ||
-                    response.statusMessage == 'Unauthenticated') {}
+                    response.statusMessage == 'Unauthorized') {
+                  //handle refresh token call
+                }
                 return handler.next(response);
               },
               onError: (DioException e, handler) {
@@ -93,7 +95,8 @@ class ApiClient {
     Map<String, dynamic>? data,
     Map<String, dynamic>? params,
   }) async {
-    final token = await ref.read(sharedPrefProvider).read('access_token');
+    final token =
+        await ref.read(sharedPrefProvider).read(StringConstants.$accessToken);
     try {
       final response = await _dio.post(
         url,

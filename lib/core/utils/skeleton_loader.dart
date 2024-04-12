@@ -39,7 +39,7 @@ class CustomShimmerLoading {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ...List.generate(
-          3,
+          4,
           (index) => const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

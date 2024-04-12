@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uc_flutter_task/core/api/abstract_api_response.dart';
-import 'package:uc_flutter_task/core/storage/secure_storage.dart';
+import 'package:uc_flutter_task/core/storage/shared_prefs.dart';
 import 'package:uc_flutter_task/core/utils/constants.dart';
 import 'package:uc_flutter_task/core/utils/enums.dart';
 import 'package:uc_flutter_task/core/utils/typedefs.dart';

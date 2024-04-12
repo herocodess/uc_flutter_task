@@ -8,7 +8,6 @@ class InputFields extends StatelessWidget {
     required this.hint,
     required this.controller,
     this.label,
-    this.onLabelSuffixTap,
     this.suffixIcon,
     this.keyboardType,
     this.textCapitalization = TextCapitalization.none,
@@ -34,7 +33,6 @@ class InputFields extends StatelessWidget {
 
   final String? label;
   final String hint;
-  final void Function()? onLabelSuffixTap;
   final Widget? suffixIcon;
   final bool read;
   final TextInputType? keyboardType;

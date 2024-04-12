@@ -20,7 +20,7 @@ class LoginPage extends HookConsumerWidget {
     final passwordController = fh.useTextEditingController();
     final formKey = fh.useState(GlobalKey<FormState>());
     final isLoading = fh.useState<bool>(false);
-    final isObscure = fh.useState<bool>(false);
+    final isObscure = fh.useState<bool>(true);
     ref.listen(
       loginProvider,
       (prev, next) {
@@ -50,7 +50,6 @@ class LoginPage extends HookConsumerWidget {
               InputFields(
                 label: 'Username',
                 hint: 'Enter your Username',
-                onLabelSuffixTap: () {},
                 controller: usernameController,
                 filled: true,
                 enabled: !isLoading.value,
@@ -61,7 +60,6 @@ class LoginPage extends HookConsumerWidget {
               InputFields(
                 label: 'Password',
                 hint: 'Enter your Password',
-                onLabelSuffixTap: () {},
                 controller: passwordController,
                 enabled: !isLoading.value,
                 filled: true,
@@ -87,7 +85,7 @@ class LoginPage extends HookConsumerWidget {
           onTap: () {
             if (usernameController.text.isEmpty) {
               Snackbars.show(
-                  'Please enter your email address', isError: true, context);
+                  'Please enter your username', isError: true, context);
             } else if (passwordController.text.isEmpty) {
               Snackbars.show(
                   'Please enter your password', isError: true, context);
