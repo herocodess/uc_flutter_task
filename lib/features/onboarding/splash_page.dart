@@ -13,25 +13,6 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 3), () async {
-      // final firstTime = await SharedPreferences.getBool('first_time');
-      // if (firstTime != null && firstTime == false) {
-      //   final model = context.modelRead;
-      //   await model.checkLoginStatus();
-      //   if (model.isLoggedIn) {
-      //     model.updateUser(
-      //       locator
-      //               .get<HiveService<UserModel>>()
-      //               .get(box: USER_BOX_KEY, collection: USER_BOX_KEY) ??
-      //           dummyUser,
-      //     );
-      //     pushToAndClearStack(context, const DashboardView());
-      //     return;
-      //   }
-      //   pushToAndClearStack(context, const LoginView());
-      //   return;
-      // } else {
-      //   pushToAndClearStack(context, const OnboardingView());
-      // }
       pushToAndClearStack(context, const LoginPage());
     });
     super.initState();
