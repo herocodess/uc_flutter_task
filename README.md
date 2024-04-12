@@ -30,7 +30,7 @@ This project runs out of the box. However, below are the steps for running this 
 
 - Add the following keys to the `envs` created and add corresponding values accordingly 
 ```sh
-   BASE_URL = ""
+   BASE_URL = "" (here the full base url up to /client/ is added)
    LOGO_BASE_URL = "" (here the full url up to /images is added)
    LOGO_ACCESS_KEY = ""
    BASE64_ENCODED_VIDEO_URL = "" (here the provided base64encoded string is suffixed by ==)
